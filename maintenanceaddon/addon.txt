@@ -1,0 +1,9 @@
+ "AddonInfo"
+ {
+    "name"                "Maintenance Addon"
+    "author_name"         "Zozo147"
+    "author_email"        "none"
+    "author_url"	  "none"
+    "version"             "1.0"
+    "info"                "Mettez vos serveurs Gmod en maintenance"
+}

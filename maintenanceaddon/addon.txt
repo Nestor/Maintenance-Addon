@@ -4,6 +4,6 @@
     "author_name"         "Zozo147"
     "author_email"        "none"
     "author_url"	  "none"
-    "version"             "1.0"
+    "version"             "1"
     "info"                "Mettez vos serveurs Gmod en maintenance"
 }

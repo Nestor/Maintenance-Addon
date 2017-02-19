@@ -22,6 +22,7 @@
 if SERVER then
 
 	include("ma/server/sv_main.lua")
+	include("ma/sh_config.lua")
 
 	if not file.IsDir("ma_data", "DATA") then
 

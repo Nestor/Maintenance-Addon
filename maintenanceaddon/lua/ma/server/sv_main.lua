@@ -23,9 +23,9 @@ local function ActiveMaintenance(ply, text, team)
 	
 	ReadingFile = util.JSONToTable(file.Read("ma_data/mastate.txt","DATA"))
 
-	if ply:IsAdmin() and text == "/maon" and ReadingFile.State != true  then
+	if ply:IsAdmin() and text == ConfigMAaddon.AddonOn and ReadingFile.State != true  then
 
-		for k, v in pairs(player.GetHumans()) do
+		for k, v in pairs(player.GetAll()) do
 
 			if not v:IsAdmin() then
 
@@ -45,13 +45,13 @@ local function ActiveMaintenance(ply, text, team)
 
 		return ""
 
-	elseif ply:IsAdmin() and text == "/maon" and ReadingFile.State == true then
+	elseif ply:IsAdmin() and text == ConfigMAaddon.AddonOn and ReadingFile.State == true then
 
 		ply:ChatPrint("Erreur : La maintenance est déjà active")
 
 		return ""
 
-	elseif ply:IsAdmin() and text == "/maoff" and ReadingFile.State != false then
+	elseif ply:IsAdmin() and text == ConfigMAaddon.AddonOff and ReadingFile.State != false then
 
 		file.Write("ma_data/mastate.txt", util.TableToJSON({State = false}))
 
@@ -59,19 +59,19 @@ local function ActiveMaintenance(ply, text, team)
 
 		return ""
 
-	elseif ply:IsAdmin() and text == "/maoff" and ReadingFile.State == false then
+	elseif ply:IsAdmin() and text == ConfigMAaddon.AddonOff and ReadingFile.State == false then
 
 		ply:ChatPrint("Erreur : La maintenance est déjà inactive")
 
 		return ""
 
-	elseif not ply:IsAdmin() and text == "/maon" then
+	elseif not ply:IsAdmin() and text == ConfigMAaddon.AddonOn then
 
 		ply:ChatPrint("Erreur : Vous n\'êtes pas Administrateur")
 
 		return ""
 
-	elseif not ply:IsAdmin() and text == "/maoff" then
+	elseif not ply:IsAdmin() and text == ConfigMAaddon.AddonOff then
 
 		ply:ChatPrint("Erreur : Vous n\'êtes pas Administrateur")
 

@@ -25,7 +25,7 @@ local function ActiveMaintenance(ply, text, team)
 
 	if ply:IsAdmin() and text == ConfigMAaddon.AddonOn and ReadingFile.State != true  then
 
-		for k, v in pairs(player.GetAll()) do
+		for k, v in pairs(player.GetHumans()) do
 
 			if not v:IsAdmin() then
 

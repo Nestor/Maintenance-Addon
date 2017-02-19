@@ -1,4 +1,4 @@
 ConfigMAaddon = {}
 
-ConfigMAaddon.AddonOn = "/on" -- Commande pour débuter la Maintenance
-ConfigMAaddon.AddonOff = "/off" -- Commande pour arrêter la Maintenance
+ConfigMAaddon.AddonOn = "/maon" -- Commande pour débuter la Maintenance
+ConfigMAaddon.AddonOff = "/maoff" -- Commande pour arrêter la Maintenance
